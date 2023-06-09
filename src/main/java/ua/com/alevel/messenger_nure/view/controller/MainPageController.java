@@ -171,7 +171,7 @@ public class MainPageController {
     @FXML
     private void open(String sendTo) {
         this.sendTo = sendTo;
-        who.setText("You correspond with: " + sendTo);
+        who.setText("You correspond with:  " + sendTo);
         vBoxForMessage.getChildren().clear();
         updateMessagePane();
     }
@@ -180,7 +180,6 @@ public class MainPageController {
     @FXML
     private void sendMessage() {
         sendMess.setOnAction(event -> {
-            System.out.println("taMessage = " + taMessage.getText());
             if (!Objects.equals(taMessage.getText().trim(), "")) {
                 Message message = new Message();
                 message.setContext(taMessage.getText());

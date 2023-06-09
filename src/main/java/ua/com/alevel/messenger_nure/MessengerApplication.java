@@ -15,6 +15,7 @@ public class MessengerApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Messenger");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 

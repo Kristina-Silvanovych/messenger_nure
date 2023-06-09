@@ -114,7 +114,7 @@ public class MainPageController {
             Label contextMessage = new Label(message.getContext());
             contextMessage.setId(message.getId().toString());
             whoSender.setFont(new Font(15));
-            contextMessage.setFont(new Font(11));
+            contextMessage.setFont(new Font(18));
 
             TextField textField = new TextField();
             textField.setVisible(false);
@@ -122,6 +122,8 @@ public class MainPageController {
             Button updateMessage = new Button();
             Button deleteMessage = new Button();
 
+            updateMessage.setVisible(false);
+            deleteMessage.setVisible(false);
             AnchorPane anchorPane = new AnchorPane(contextMessage, whoSender, deleteMessage, textField, updateMessage);
 
             AnchorPane.setTopAnchor(whoSender, 0.0);
@@ -130,9 +132,11 @@ public class MainPageController {
             AnchorPane.setRightAnchor(updateMessage, 50.0);
             AnchorPane.setBottomAnchor(textField, 0.0);
 
-            anchorPane.setPrefSize(600, 40);
+            anchorPane.setPrefSize(611, 40);
 
             if (message.getUserLogin().equals(loginAuthorized)) {
+                updateMessage.setVisible(true);
+                deleteMessage.setVisible(true);
                 whoSender.setText("you:");
                 anchorPane.setStyle("-fx-background-color: #77a4bb");
 

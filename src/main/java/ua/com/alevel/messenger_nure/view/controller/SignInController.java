@@ -49,6 +49,7 @@ public class SignInController {
                     loader.load();
                     Parent root = loader.getRoot();
                     Stage stage = new Stage();
+                    stage.setResizable(false);
                     stage.setTitle(user.getLogin());
 
                     //Transfer data from this class to MainPageController class

@@ -73,13 +73,12 @@ public class SignUpController {
 
                     Parent root = loader.getRoot();
                     Stage stage = new Stage();
+                    stage.setResizable(false);
                     stage.setScene(new Scene(root));
                     SignInController signInController = loader.getController();
                     signInController.getTfUsername().setText(user.getLogin());
                     stage.showAndWait();
 
-                }else {
-                    labelWelcome.setText("A user with this login already exists");
                 }
             } catch (SQLException | ClassNotFoundException e) {
                 throw new RuntimeException(e);
@@ -103,16 +102,27 @@ public class SignUpController {
 
             Parent root = loader.getRoot();
             Stage stage = new Stage();
+            stage.setResizable(false);
             stage.setScene(new Scene(root));
             stage.showAndWait();
         });
     }
 
-    private boolean checkUser(){
-        return userFacade.findByLogin(tfUsername.getText()) == null &&
-                tfEmail.getText() != null &&
-                tfPassword.getText() != null &&
-                tfUsername.getText() != null &&
-                tfPhoneNumber.getText() != null;
+    private boolean checkUser() {
+        if (tfEmail.getText().equals("") ||
+                tfPassword.getText().equals("") ||
+                tfUsername.getText().equals("") ||
+                tfPhoneNumber.getText().equals("")) {
+            labelWelcome.setText("Fill in all the fields!");
+            labelWelcome.setStyle("-fx-background-color: red");
+            return false;
+        }
+        if (userFacade.findByLogin(tfUsername.getText()) != null) {
+            labelWelcome.setText("A user with this login already exists");
+            labelWelcome.setStyle("-fx-background-color: red");
+            return false;
+        }
+        return true;
+
     }
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="apMain" prefHeight="593.0" prefWidth="866.0" style="-fx-background-color: #002F55;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.com.alevel.messenger_nure.view.controller.MainPageController">
+   <children>
+      <ScrollPane fx:id="scrollPeople" hbarPolicy="NEVER" layoutY="34.0" maxHeight="700" prefHeight="535.0" prefWidth="254.0" />
+      <ScrollPane fx:id="scrollMessage" hbarPolicy="NEVER" layoutX="254.0" layoutY="42.0" prefHeight="412.0" prefWidth="611.0" style="-fx-background-color: #002F55;" vvalue="1.0" />
+      <TextArea fx:id="taMessage" layoutX="254.0" layoutY="427.0" prefHeight="128.0" prefWidth="611.0" promptText="Write your message..." style="-fx-background-color: #999999;" />
+      <Button fx:id="sendMess" layoutX="254.0" layoutY="555.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="38.0" prefWidth="611.0" text="Send message" />
+      <TextField fx:id="tfFind" layoutY="0.0" prefHeight="32.0" prefWidth="174.0" promptText="Find..." style="-fx-background-color: #999999;" />
+      <Button fx:id="buttonFind" layoutX="174.0" layoutY="-3.0" mnemonicParsing="false" onAction="#findUser" prefHeight="38.0" prefWidth="80.0" text="Find People" />
+      <Label fx:id="who" layoutX="261.0" layoutY="20.0" textFill="WHITE" />
+      <Button fx:id="updatePage" layoutY="566.0" mnemonicParsing="false" onAction="#updateUsers" prefHeight="26.0" prefWidth="254.0" text="update" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="866.0" style="-fx-background-color: #002F55;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.com.alevel.messenger_nure.view.controller.SignUpController">
+   <AnchorPane prefHeight="593.0" prefWidth="308.0" style="-fx-background-color: #0E294B;">
+      <Label layoutX="66.0" layoutY="180.0" prefHeight="64.0" prefWidth="175.0" text="Kristina Silvanovich" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="118.0" prefHeight="80.0" prefWidth="295.0" text="Messenger" textFill="WHITE">
+         <font>
+            <Font size="58.0" />
+         </font>
+      </Label>
+   </AnchorPane>
+   <Label  fx:id="labelWelcome" layoutX="414.0" layoutY="45.0" text="Welcome to my application!" textFill="WHITE">
+      <font>
+         <Font size="27.0" />
+      </font>
+   </Label>
+   <Label layoutX="518.0" layoutY="84.0" text="Please sign up" textFill="WHITE">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
+   <Label layoutX="357.0" layoutY="152.0" text="Username" textFill="WHITE">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
+   <Label layoutX="357.0" layoutY="200.0" text="email" textFill="WHITE">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
+   <Label layoutX="357.0" layoutY="252.0" text="Phone number" textFill="WHITE">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
+   <Label layoutX="357.0" layoutY="306.0" text="password" textFill="WHITE">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
+   <TextField fx:id="tfUsername" layoutX="518.0" layoutY="154.0" prefHeight="26.0" prefWidth="314.0" promptText="Your username" />
+   <TextField fx:id="tfEmail" layoutX="518.0" layoutY="202.0" prefHeight="26.0" prefWidth="314.0" promptText="Your email" />
+   <TextField fx:id="tfPhoneNumber" layoutX="518.0" layoutY="254.0" prefHeight="26.0" prefWidth="314.0" promptText="Your phone number" />
+   <PasswordField fx:id="tfPassword" layoutX="518.0" layoutY="308.0" prefHeight="26.0" prefWidth="314.0" promptText="Your password" />
+   <Button fx:id="buttonSignUp" layoutX="455.0" layoutY="383.0" mnemonicParsing="false" onAction="#createUser" prefHeight="51.0" prefWidth="252.0" text="Sign up">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </Button>
+   <Label layoutX="391.0" layoutY="482.0" text="Already have an account?" textFill="WHITE">
+      <font>
+         <Font size="15.0" />
+      </font>
+   </Label>
+   <Button fx:id="buttonGoSignIn" layoutX="560.0" layoutY="473.0" mnemonicParsing="false" onAction="#goToSignIn" prefHeight="39.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Sign In!" textFill="#feff00">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Button>
+</AnchorPane>
